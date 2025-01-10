@@ -588,8 +588,11 @@
                     form.reset(); // Reset form
                   }
                 })
-                .catch(() => {
-                });
+               .catch((error) => {
+  console.error('Error during submission:', error); // Log the error
+  document.querySelector('.error-message').style.display = 'block'; // Show error message to user
+});
+
               });
             });
           </script>
